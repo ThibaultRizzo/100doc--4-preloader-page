@@ -1,0 +1,87 @@
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    background-color: white;
+  }
+}
+
+@keyframes shrinkLogo {
+  to {
+    left: 2vh;
+    height: 15vh;
+  }
+}
+
+@keyframes slideLeft {
+  to {
+    left: -100vw;
+  }
+}
+
+@keyframes slideRight {
+  to {
+    right: -100vw;
+  }
+}
+
+@keyframes walkGiraffe {
+}
+
+/* Styles */
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding-top: 16vh;
+}
+
+#preloader {
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.loaded .logo {
+  animation: shrinkLogo 1s forwards;
+}
+
+.left-pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100vh;
+
+  background-color: orange;
+  animation: fadeIn 1s forwards 1;
+}
+
+.right-pane {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50vw;
+  height: 100vh;
+  background-color: orange;
+  animation: fadeIn 1s forwards 1;
+}
+
+.loaded .left-pane {
+  animation: slideLeft 2s ease-in forwards;
+}
+.loaded .right-pane {
+  animation: slideRight 1.5s ease-in forwards;
+}
+
+.logo {
+  position: absolute;
+  top: 2vh;
+  left: 25vw;
+  height: 100%;
+}
+
+.giraffes path {
+  /* fill: red; */
+}
